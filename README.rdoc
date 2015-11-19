@@ -7,4 +7,4 @@
 
 == Challenge #2: Who needs help? 
 
-* Implement tests and functionality so that a teacher can go to `'/teachers/ID/students' and see the five students who are struggling the most (ie -- the five students with the lowest value in their current_score attribute). No more than five students should be displayed, regardless of how many students are in that teacher's class. 
+* Implement tests and functionality so that someone can go to `'/students'` and see the five students who are struggling the most (ie -- the five students with the lowest value in their `current_score` attribute). No more than five students should be displayed, regardless of how many students exist in the database. 
