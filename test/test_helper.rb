@@ -6,9 +6,9 @@ require 'capybara/rails'
 require 'database_cleaner'
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  MAGIC = [ true, false ]
 
+  fixtures :all
 
   def create_teachers(num = 1)
     num.times do
@@ -26,11 +26,11 @@ class ActiveSupport::TestCase
             last_name: Faker::Name.last_name,
             age:       Random.rand(18..99),
             teacher_id: Teacher.all.sample.id,
-            current_score: Random.rand(1..10)
+            current_score: Random.rand(1..10),
+            magical: MAGIC.sample
       )
     end
   end
-
 end
 
 class ActionDispatch::IntegrationTest
