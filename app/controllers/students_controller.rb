@@ -5,9 +5,4 @@ class StudentsController < ApplicationController
     @magicians = Student.where(magical: true)
     @muggles = Student.where(magical: false)
   end
-
-  def lowest_five
-    @struggling =
-    Student.all.order(:current_score).take(5)
-  end
 end
