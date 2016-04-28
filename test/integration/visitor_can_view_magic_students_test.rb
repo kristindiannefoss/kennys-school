@@ -2,7 +2,7 @@ require 'test_helper'
 
 class VisitorCanViewMagicStudentsTest < ActionDispatch::IntegrationTest
   test "visitor can view a page with all the magical students" do
-    # create_students(2)
+
     magician1 =   Student.create(
                 first_name: Faker::Name.first_name,
                 last_name: Faker::Name.last_name,
@@ -32,7 +32,7 @@ class VisitorCanViewMagicStudentsTest < ActionDispatch::IntegrationTest
     visit students_path
 
     assert_equal 11, Student.all.count
-# save_and_open_page
+
     within ".magic" do
       assert page.has_content?(magician1.first_name)
       assert page.has_content?(magician2.first_name)
