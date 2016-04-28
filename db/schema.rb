@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427043735) do
+ActiveRecord::Schema.define(version: 20160427230808) do
 
   create_table "students", force: :cascade do |t|
     t.integer "teacher_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160427043735) do
     t.string  "last_name"
     t.integer "age"
     t.integer "current_score"
+    t.boolean "magical"
   end
 
   add_index "students", ["teacher_id"], name: "index_students_on_teacher_id"

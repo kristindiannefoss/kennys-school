@@ -4,13 +4,5 @@
 <h2>Struggling Students: </h2>
 
   <% @struggling.each do |student| %>
-  <p><%= student.last_name %>: <%= student.current_score %></p>
+  <p><%= student.first_name %> <%= student.last_name %> has a Current Score of: <%= student.current_score %></p>
   <% end %>
-
-<h2>Student Roster: </h2>
-
-<ol>
-  <% @students.each do |student| %>
-      <li><%= student.first_name %> <%= student.last_name %>: <%= student.teacher.first_name %> <%= student.teacher.last_name %></li>
-  <% end %>
-</ol>
