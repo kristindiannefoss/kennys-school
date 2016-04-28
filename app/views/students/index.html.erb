@@ -9,8 +9,8 @@
 
 <h2>Student Roster: </h2>
 
-<ol>
   <% @students.each do |student| %>
+  <ol>
       <li><%= student.first_name %> <%= student.last_name %>: <%= student.teacher.first_name %> <%= student.teacher.last_name %></li>
+  </ol>
   <% end %>
-</ol>

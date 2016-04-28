@@ -7,6 +7,7 @@ require 'database_cleaner'
 
 class ActiveSupport::TestCase
   MAGIC = [ true, false ]
+  TEACHERID = [ 1, 2, 3 ]
 
   fixtures :all
 
@@ -25,7 +26,7 @@ class ActiveSupport::TestCase
             first_name: Faker::Name.first_name,
             last_name: Faker::Name.last_name,
             age:       Random.rand(18..99),
-            teacher_id: Teacher.all.sample.id,
+            teacher_id: TEACHERID.sample,
             current_score: Random.rand(1..10),
             magical: MAGIC.sample
       )
