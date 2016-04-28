@@ -10,10 +10,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   def create_teachers
-    Teacher.create(first_name: "Jillian", last_name: "Keeling")
-    Teacher.create(first_name: "Blair", last_name: "Weber")
-    Teacher.create(first_name: "Deondre", last_name: "Tromp")
-    Teacher.create(first_name: "Aaron", last_name: "Hamill")
+    Teacher.create(first_name: "Jillian", last_name: "Keeling", alter_ego: "Sherah")
+    Teacher.create(first_name: "Daniel", last_name: "Carning", alter_ego: "Lycanthrope")
+    Teacher.create(first_name: "Blair", last_name: "Weber", alter_ego: "White Queen")
+    Teacher.create(first_name: "Deondre", last_name: "Tromp", alter_ego: "Ziggy Stardust")
+    Teacher.create(first_name: "Aaron", last_name: "Hamill", alter_ego: "Lycanthrope")
   end
 
   def create_students

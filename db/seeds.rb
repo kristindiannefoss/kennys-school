@@ -1,24 +1,62 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  4.times do
-    Teacher.create(
-          first_name: Faker::Name.first_name,
-          last_name: Faker::Name.last_name
-    )
-  end
+    Teacher.create(first_name: "Jillian", last_name: "Keeling", alter_ego: "Sherah")
+    Teacher.create(first_name: "Daniel", last_name: "Carning", alter_ego: "Lycanthrope")
+    Teacher.create(first_name: "Blair", last_name: "Weber", alter_ego: "White Queen")
+    Teacher.create(first_name: "Deondre", last_name: "Tromp", alter_ego: "Ziggy Stardust")
+    Teacher.create(first_name: "Aaron", last_name: "Hamill", alter_ego: "Lycanthrope")
 
-  10.times do
-    Student.create(
-          first_name: Faker::Name.first_name,
-          last_name: Faker::Name.last_name,
-          age:       Random.rand(18..99),
-          teacher_id: Teacher.all.sample.id,
-          current_score: Random.rand(1..10)
-    )
-  end
+    Student.create(teacher_id: 3,
+    first_name: "Bella",
+    last_name: "Lockman",
+    age: 93,
+    current_score: 9,
+    magical: false)
+
+    Student.create(teacher_id: 2,
+    first_name: "Rosa",
+    last_name: "Streich",
+    age: 48,
+    current_score: 9,
+    magical: false )
+
+    Student.create(teacher_id: 2,
+    first_name: "Elnora",
+    last_name: "Anderson",
+    age: 64,
+    current_score: 8,
+    magical: true )
+
+    Student.create(teacher_id: 2,
+    first_name: "Shayna",
+    last_name: "Mann",
+    age: 96,
+    current_score: 7,
+    magical: false)
+
+    Student.create(teacher_id: 3,
+    first_name: "Kirk",
+    last_name: "Parisian",
+    age: 76,
+    current_score: 5,
+    magical: false)
+
+    Student.create(teacher_id: 3,
+    first_name: "Marley",
+    last_name: "Wiegand",
+    age: 41,
+    current_score: 2,
+    magical: true)
+
+    Student.create(teacher_id: 3,
+    first_name: "Jamaal",
+    last_name: "Weissnat",
+    age: 54,
+    current_score: 3,
+    magical: true)
+
+    Student.create(teacher_id: 1,
+    first_name: "Aimee",
+    last_name: "Moen",
+    age: 51,
+    current_score: 1,
+    magical: false )
