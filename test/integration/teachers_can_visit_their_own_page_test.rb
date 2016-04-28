@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TeachersCanVisitTheirOwnPageTest < ActionDispatch::IntegrationTest
   test "teachers can view only their information their own page" do
-    create_teachers(2)
+    create_teachers
     # byebug
     teacher = Teacher.first
 

@@ -27,12 +27,11 @@ class VisitorCanViewMagicStudentsTest < ActionDispatch::IntegrationTest
                 current_score: Random.rand(1..10),
                 magical: false
           )
-    # magician2 = Student.second
-    create_students(4, false)
+    create_students
 
     visit students_path
 
-    assert_equal 7, Student.all.count
+    assert_equal 11, Student.all.count
 # save_and_open_page
     within ".magic" do
       assert page.has_content?(magician1.first_name)

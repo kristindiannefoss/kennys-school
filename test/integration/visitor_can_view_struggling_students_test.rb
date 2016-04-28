@@ -2,7 +2,7 @@ require 'test_helper'
 
 class VisitorCanViewStrugglingStudentsTest < ActionDispatch::IntegrationTest
   test "visitor can view 5 most struggling students" do
-    create_students(8)
+    create_students
 
     student_ordered = Student.all.order(:current_score)
 

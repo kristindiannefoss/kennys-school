@@ -2,8 +2,8 @@ require 'test_helper'
 
 class VisitorCanViewStudentsWithTeacherTest < ActionDispatch::IntegrationTest
   test "visitor views student with teacher name" do
-    create_teachers(3)
-    create_students(3)
+    create_teachers
+    create_students
 
     student1 = Student.create(
                 first_name: Faker::Name.first_name,
