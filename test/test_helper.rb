@@ -20,7 +20,7 @@ class ActiveSupport::TestCase
     end
   end
 
-  def create_students(num = 1)
+  def create_students(num = 1, magic = true)
     num.times do
       Student.create(
             first_name: Faker::Name.first_name,

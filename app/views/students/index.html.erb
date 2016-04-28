@@ -1,8 +1,18 @@
 <h1>Welcome to Kenny's School</h1>
 
-
-<h2>Struggling Students: </h2>
+<div class="struggle">
+  <h2>Struggling Students: </h2>
 
   <% @struggling.each do |student| %>
   <p><%= student.first_name %> <%= student.last_name %> has a Current Score of: <%= student.current_score %></p>
   <% end %>
+</div>
+
+
+  <h2>Magical Students: </h2>
+
+  <div class="magic">
+  <% @magicians.each do |magician| %>
+  <p><%= magician.first_name %> <%= magician.last_name %> has shown signs of being magical: <%= magician.magical %></p>
+  <% end %>
+</div>
